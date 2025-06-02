@@ -8,11 +8,8 @@ document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess);
 
-  //when there is no input
   if (!guess) {
     document.querySelector('.message').textContent = '⛔No number!';
-
-    //when player wins
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉Correct number';
     document.querySelector('.number').textContent = secretNumber;
@@ -31,7 +28,7 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = score;
     } else {
       document.querySelector('.message').textContent = '👎You lost the game';
-      //document.querySelector('body').style.backgroundColor = '#FF0000';
+
       document.querySelector('.score').textContent = 0;
     }
   }
